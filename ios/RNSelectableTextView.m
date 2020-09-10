@@ -174,6 +174,8 @@ UITextPosition* beginning;
     [_backedTextInputView select:self];
     [_backedTextInputView selectAll:self];
     [self _handleGesture];
+
+    self.onPressText()
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText

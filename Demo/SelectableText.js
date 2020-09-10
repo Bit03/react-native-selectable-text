@@ -72,7 +72,7 @@ const mapHighlightsRanges = (value, highlights) => {
  * textComponentProps: object
  */
 export const SelectableText = ({
-  onSelection, onHighlightPress, textValueProp, value, TextComponent,
+  onSelection, onHighlightPress, textValueProp, value, TextComponent, onPressText,
   textComponentProps, ...props
 }) => {
   const { theme } = useTheme();
@@ -140,6 +140,7 @@ export const SelectableText = ({
       onHighlightPress={onHighlightPressNative}
       selectable
       onSelection={onSelectionNative}
+      onPressText={onPressText}
     >
       <TextComponent
         key={v4()}
