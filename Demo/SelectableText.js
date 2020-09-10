@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, requireNativeComponent, Platform } from 'react-native'
 import { v4 } from 'uuid'
 import memoize from 'fast-memoize'
+import { useTheme } from 'react-native-basic-plus'
 
 const RNSelectableText = requireNativeComponent('RNSelectableText')
 
@@ -74,6 +75,7 @@ export const SelectableText = ({
   onSelection, onHighlightPress, textValueProp, value, TextComponent,
   textComponentProps, ...props
 }) => {
+  const { theme } = useTheme();
   const usesTextComponent = !TextComponent;
   TextComponent = TextComponent || Text;
   textValueProp = textValueProp || 'children';  // default to `children` which will render `value` as a child of `TextComponent`

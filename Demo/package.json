@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react": "16.6.3",
-    "react-native": "^0.59.0"
+    "react-native": "^0.59.0",
+    "react-native-basic-plus": "^0.0.5"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
